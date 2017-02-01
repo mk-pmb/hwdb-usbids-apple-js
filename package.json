@@ -1,0 +1,34 @@
+{ "name": "hwdb-usbids-apple",
+  "version": "0.170201.0",
+  "description": "Incomplete list of Apple USB device product IDs, taken from the systemd hwdb. [lsusb idVendor idProduct]",
+  "keywords": [
+    "Apple",
+    "hwdb",
+    "idProduct",
+    "idVendor",
+    "iPad",
+    "iPhone",
+    "lsusb",
+    "udev",
+    "usb"
+  ],
+
+  "author": "M.K. (https://github.com/mk-pmb)",
+  "homepage": "https://github.com/mk-pmb/hwdb-usbids-apple-js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-pmb/hwdb-usbids-apple-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mk-pmb/hwdb-usbids-apple-js/issues"
+  },
+
+  "private": false, "license": "LGPL-2.1",
+
+  "main": "index.js",
+  "scripts": { "test": "nodejs test/usage.js" },
+  "directories": { "test": "test" },
+
+
+  "npm vs. BOM = Unexpected token": "-*- coding: UTF-8 -*-"
+}
