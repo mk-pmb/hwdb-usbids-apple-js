@@ -13,20 +13,27 @@ function readmeDemo(expectEqual) {
   expectEqual(identify(usbDev), 'iPad 3 (3G, 16 GB)');
   expectEqual(identify(usbHub), false);   // from some other manufacturer
   //#r
+
+
   return appleUsbIds;
 }
 
-var eq = require('assert').deepStrictEqual, appleUsbIds = readmeDemo(eq).db,
-  vendorIds = Object.keys(appleUsbIds),
-  products = appleUsbIds[vendorIds[0]], vendorNameKey = '';
 
-eq(appleUsbIds[''], undefined);
-eq(vendorIds.length, 1);
-eq(products[vendorNameKey], 'Apple, Inc.');
+function testAll() {
+  var eq = require('assert').deepStrictEqual, appleUsbIds = readmeDemo(eq).db,
+    vendorIds = Object.keys(appleUsbIds),
+    products = appleUsbIds[vendorIds[0]], vendorNameKey = '';
 
-// check lowercase-ness
-eq(products['129A'], undefined);
-eq(products['129a'], 'iPad');
+  eq(appleUsbIds[''], undefined);
+  eq(vendorIds.length, 1);
+  eq(products[vendorNameKey], 'Apple, Inc.');
+
+  // check lowercase-ness
+  eq(products['129A'], undefined);
+  eq(products['129a'], 'iPad');
+
+  console.log("+OK tests passed.");   //= "+OK tests passed."
+}
 
 
 
@@ -34,5 +41,10 @@ eq(products['129a'], 'iPad');
 
 
 
-
-console.log("+OK tests passed.");   //= "+OK tests passed."
+(function (e) { // alternate export
+  /*global define: true */
+  var d = ((typeof define === 'function') && define),
+    m = ((typeof module === 'object') && module);
+  if (d && d.amd) { d(function () { return e; }); }
+  if (m && m.exports) { m.exports = e; }
+}(testAll));

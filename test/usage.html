@@ -1,17 +1,14 @@
 <!DOCTYPE html><html><head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Usage test</title>
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
 </head><body>
-  <p>XHR errors when testing via file:// protocol? Try <a
-    href="https://mk-pmb.github.io/hwdb-usbids-apple-js/test/usage.html"
-    >HTTP(S)</a>.</p>
+  <script src="../../amdldr16-pmb/lib/dirty-shams/pre-console.js"></script>
   <script type="text/javascript" src="../../amdldr16-pmb/dist/al.js">/*[
-    [ "ldr./lib/dirty-shams/pre-console.js" ],
     [ "alias", {
       "assert": "ldr./lib/dirty-shams/json-assert.js",
-      "hwdb-usbids-apple": "cjs!doc./../index.js",
-      "doc./../hwdb/apple.json": "json!doc./../hwdb/apple.json"
+      "hwdb-usbids-apple": "doc../index.js"
       } ],
-    [ "cjs!doc./usage.js" ]
+    [ "cjs!doc./usage.js", true ]
   ]*/</script>
 </body></html>

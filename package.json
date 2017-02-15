@@ -1,5 +1,5 @@
 { "name": "hwdb-usbids-apple",
-  "version": "0.170201.0",
+  "version": "0.170201.1",
   "description": "Incomplete list of Apple USB device product IDs, taken from the systemd hwdb. [lsusb idVendor idProduct]",
   "keywords": [
     "Apple",
@@ -26,7 +26,7 @@
   "private": false, "license": "LGPL-2.1",
 
   "main": "index.js",
-  "scripts": { "test": "nodejs test/usage.js" },
+  "scripts": { "test": "nodejs test/all.js" },
   "directories": { "test": "test" },
 
 
